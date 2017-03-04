@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		STUDENT DETAILS
+	</title>
+</head>
+<body>
+
+	<div>
+		<h1> Student details </h1>
+	</div>
+
+	<form method ="post" action="http://127.0.0.1:8000/sucess">
+		{% csrf_token %}
+		<label>NAME:</label>
+		<input type="text" name="name" placeholder="enter name"><br>
+		<label>ROLL NUMBER:</label>
+		<input type="number" name="rollno" placeholder="enter roll number"><br>
+		<label>CLASS:</label>
+		<input type="text" name="clss" placeholder="enter your class"><br>
+		<label>MARKS:</label>
+		<input type="number" name="mark1" placeholder="mark1" min=0 max=100>
+		<input type="number" name="mark2" placeholder="mark2" min=0 max=100>
+		<input type="number" name="mark3" placeholder="mark3" min=0 max=100><br>
+		<input type="submit" name="proceed" >
+	</form>
+	
+	<form method="post" action="http://127.0.0.1:8000/view">
+		{% csrf_token %}
+		<button>view</button>
+	</form>
+	
+	<style type="text/css">
+	
+		body{
+			margin: 0;
+		}
+	
+		h1{
+			text-align: center;
+			margin: 0;
+			vertical-align: center;
+		}
+	
+		div{
+			width: 100%;
+			height: 50px;
+			background-color: whitesmoke;
+		}
+	
+		form{
+			text-align: center;
+			padding-top: 50px;
+		}
+
+		input{
+			margin-top: 10px;
+		}
+	
+	</style>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+</head>
+<body>
+<TABLE BORDER="5"    WIDTH="100%"   CELLPADDING="4" CELLSPACING="3">
+   <TR>
+      <TH COLSPAN="6"><BR><H3>details of the students</H3>
+      </TH>
+   </TR>
+   <TR>
+      <TH>name</TH>
+      <TH>Class</TH>
+      <th>average</th>
+      <th>mark1</th>
+      <th>mark2</th>
+      <th>mark3</th>
+   </TR>
+   
+        {%for i in details%}
+      <div> 
+         <TR ALIGN="CENTER">
+         <TD>{{i.name}}</TD>
+         <TD>{{i.clss}}</TD>
+         <TD>{{i.avg}}</TD>
+         <TD>{{i.mark1}}</TD>
+         <TD>{{i.mark2}}</TD>
+         <TD>{{i.mark3}}</TD>
+          </TR>
+      </div>
+      {%endfor%}
+      
+  
+</TABLE>
+</body>
+</html>
